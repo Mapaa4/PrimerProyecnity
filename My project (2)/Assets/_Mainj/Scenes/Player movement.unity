@@ -205,12 +205,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135386364}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.072839, y: -1.3381897, z: -10}
+  m_LocalScale: {x: 1.3682778, y: 1.5381491, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 989483582}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &135386368
 MonoBehaviour:
@@ -657,10 +657,11 @@ Transform:
   m_GameObject: {fileID: 989483579}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.61, y: 2.49, z: 0}
+  m_LocalPosition: {x: -5.9, y: 0.87, z: 0}
   m_LocalScale: {x: 0.7308458, y: 0.65013206, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 135386367}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &989483583
@@ -672,13 +673,13 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989483579}
   m_BodyType: 0
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -689,7 +690,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &989483584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,15 +703,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796e1364bcf7b0f43a0fe2ea0ac7f856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Playermovement
-  altura: 1.65
-  edad: 1742
-  nombre: Pau
-  puedeVotar: 1
-  gameObject: {fileID: 989483579}
-  rigidbody2D: {fileID: 989483583}
-  collider2D: {fileID: 989483580}
-  spriteRenderer: {fileID: 989483581}
-  tranform: {fileID: 0}
+  _force: 15
+  _speed: 1000
+  _rigidbody2D: {fileID: 989483583}
 --- !u!1 &1095417946
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,6 +1021,5 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 135386367}
   - {fileID: 989483582}
   - {fileID: 1779921405}
