@@ -1,29 +1,30 @@
+using System;
 using UnityEngine;
 
 public class Playermovement : MonoBehaviour
 {
 
     [SerializeField] private float _force = 5f;
-    [SerializeField] private float _speed = 1000f;
+    [SerializeField] private float _speed = 5f;
     [SerializeField] private Rigidbody2D _rigidbody2D;
 
+    [SerializeField] private GroundCheck _groundCheck;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void Start()
+    private void Awake ()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    private void Update()
+    private void FixedUpdate()
     {
-      if (Input.GetKey(KeyCode.Space))
-     {
-        _rigidbody2D.AddForce(Vector2.up * _force);
-
-     }
-        _rigidbody2D.linearVelocity = Vector2.right * _speed * Time.deltaTime;
-
-
+        if (_groundCheck.isGround)
+        {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                _rigidbody2D.AddForce(Vector2.up * _force);
+                Debug.Log("Oprimi la tecla");
+            }
+        }
+        _rigidbody2D.linearVelocity = Vector2.right * _speed;
     }
 }
